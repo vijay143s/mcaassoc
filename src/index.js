@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { StrictMode, Suspense } from 'react';
+import ReactDOM from 'react-dom';
+//import { createBrowserHistory } from 'history';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import { Provider } from "react-redux";
+import registerServiceWorker from './registerServiceWorker';
+import customstore from './redux/customstore';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom'
+
+import './app/i18n';
+import LoadingIndicator from './common/LoadingIndicator';
+import { App } from './app/App';
+
+ReactDOM.render(
+    <Provider store={customstore} >
+        <StrictMode>
+
+            <Suspense fallback={(<LoadingIndicator variant="loader-w" style={{ marginTop: 100, textAlign: "center" }} />)}>
+                <LoadingIndicator />
+                <HashRouter basename='/' >
+                    {
+                        //history={createBrowserHistory} 
+                    }
+                    <App />
+                </HashRouter>
+            </Suspense>
+        </StrictMode>
+    </Provider>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+registerServiceWorker();

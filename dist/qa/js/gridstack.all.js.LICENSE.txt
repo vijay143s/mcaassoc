@@ -1,0 +1,16 @@
+/*! jQuery UI - v1.12.1 - 2019-11-20
+* http://jqueryui.com
+* Includes: widget.js, data.js, disable-selection.js, scroll-parent.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/mouse.js
+* Copyright jQuery Foundation and other contributors; Licensed MIT @preserve*/
+
+/**
+ * gridstack.js 0.6.0
+ * https://gridstackjs.com/
+ * (c) 2014-2019 Dylan Weiss, Alain Dumesny, Pavel Reznikov
+ * gridstack.js may be freely distributed under the MIT license.
+ * @preserve
+*/
+
+/** gridstack.js 0.6.0 - IE and older browsers Polyfills for this library @preserve*/
+
+/** gridstack.js 0.6.0 - JQuery UI Drag&Drop plugin @preserve */

@@ -1,0 +1,30 @@
+import { useEffect, useState } from "react";
+
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height, scrollY: top } = window;
+    return {
+        top,
+        width,
+        height
+    };
+}
+
+export default function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+    );
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+        window.addEventListener('scroll', handleResize);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener('scroll', handleResize);
+            window.removeEventListener("resize", handleResize);
+        }
+    }, []);
+
+    return windowDimensions;
+}
