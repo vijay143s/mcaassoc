@@ -47,6 +47,8 @@ jobs:
             **/.next/**
             **/logs/**
             **/.cache/**
+            **/.npm-cache/**
+            **/.npm-cache
 
       - name: SSH - Install Node Modules & Restart App
         uses: appleboy/ssh-action@master
