@@ -1,0 +1,81 @@
+name: Deploy to cPanel Node.js App
+
+on:
+  push:
+    branches:
+      - 'enhance*'
+      - 'main'
+      - 'master'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.18.3'
+
+      - name: Install dependencies
+        run: npm ci --force
+
+      - name: Build frontend
+        run: npm run build:qa
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./
+          server-dir: /home/mcaandas/mcaandassoc.com/mca
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env*
+            **/*.md
+            **/dist/**
+            **/build/**
+            **/.next/**
+            **/logs/**
+            **/.cache/**
+
+      - name: SSH - Install Node Modules & Restart App
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            cd /home/mcaandas/mcaandassoc.com/mca
+            echo "📦 Installing dependencies..."
+            npm install --production
+            
+            echo "🔨 Building frontend..."
+            npm run build:qa
+            
+            echo "🔄 Restarting Node.js application..."
+            # If using cPanel's Node.js Manager
+            /opt/cpanel/ea-nodejs20/bin/npm restart
+            
+            # Or if using PM2 (if installed on your cPanel)
+            # pm2 restart ecosystem.config.js --env production
+            # pm2 save
+            
+            echo "✅ Deployment completed successfully!"
+            echo "🌐 Your app should be available at your domain"
+
+      - name: Deployment Summary
+        run: |
+          echo "✅ Deployment to cPanel completed!"
+          echo "📁 Files deployed to: /home/mcaandas/mcaandassoc.com/mca"
+

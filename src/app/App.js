@@ -10,7 +10,8 @@ import '../assets/css/developerstyles.css';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/style.css';
 import '../assets/css/style4.css';
-import '../assets/css/gridstack.min.css'
+import '../assets/css/gridstack.min.css';
+import '../assets/css/mobile.css';
 import Dashboard from '../components/accountAdmin/Dashboard';
 export const App = (props) => {
   const dispatch = useDispatch();
