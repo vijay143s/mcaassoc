@@ -1,0 +1,250 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.2
+2 info using node@v22.17.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/vijayramireddy/Library/Caches/typescript/5.9/.npmrc
+5 silly config load:file:/Users/vijayramireddy/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @types/html-webpack-plugin@ts5.9
+8 verbose argv "install" "--ignore-scripts" "@types/html-webpack-plugin@ts5.9" "--save-dev" "--user-agent" "typesInstaller/5.9.2"
+9 verbose logfile logs-max:10 dir:/Users/vijayramireddy/Downloads/mohan/.npm-cache/_logs/2026-02-13T07_04_39_522Z-
+10 verbose logfile /Users/vijayramireddy/Downloads/mohan/.npm-cache/_logs/2026-02-13T07_04_39_522Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly packumentCache corgi:https://registry.npmjs.org/@types%2fhtml-webpack-plugin cache-miss
+14 http fetch GET 200 https://registry.npmjs.org/@types%2fhtml-webpack-plugin 1215ms (cache miss)
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2fhtml-webpack-plugin set size:undefined disposed:false
+16 silly idealTree buildDeps
+17 silly fetch manifest @types/html-webpack-plugin@3.2.9
+18 silly packumentCache full:https://registry.npmjs.org/@types%2fhtml-webpack-plugin cache-miss
+19 http fetch GET 200 https://registry.npmjs.org/@types%2fhtml-webpack-plugin 1011ms (cache revalidated)
+20 silly packumentCache full:https://registry.npmjs.org/@types%2fhtml-webpack-plugin set size:46100 disposed:false
+21 silly placeDep ROOT @types/html-webpack-plugin@3.2.9 REPLACE for:  want: 3.2.9
+22 silly reify moves {}
+23 silly audit bulk request {
+23 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+23 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+23 silly audit   '@babel/parser': [ '7.29.0' ],
+23 silly audit   '@babel/runtime': [ '7.28.6' ],
+23 silly audit   '@babel/types': [ '7.29.0' ],
+23 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+23 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+23 silly audit   '@jridgewell/source-map': [ '0.3.11' ],
+23 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+23 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+23 silly audit   '@popperjs/core': [ '2.11.8' ],
+23 silly audit   '@types/babel__core': [ '7.20.5' ],
+23 silly audit   '@types/babel__generator': [ '7.27.0' ],
+23 silly audit   '@types/babel__preset-env': [ '7.10.0' ],
+23 silly audit   '@types/babel__template': [ '7.4.4' ],
+23 silly audit   '@types/babel__traverse': [ '7.28.0' ],
+23 silly audit   '@types/bcrypt': [ '6.0.0' ],
+23 silly audit   '@types/body-parser': [ '1.19.6' ],
+23 silly audit   '@types/bootstrap': [ '5.2.10' ],
+23 silly audit   '@types/clean-css': [ '4.2.11' ],
+23 silly audit   '@types/compression': [ '1.8.1' ],
+23 silly audit   '@types/connect': [ '3.4.38' ],
+23 silly audit   '@types/connect-history-api-fallback': [ '1.5.4' ],
+23 silly audit   '@types/cookie-parser': [ '1.4.10' ],
+23 silly audit   '@types/core-js': [ '2.5.8' ],
+23 silly audit   '@types/cors': [ '2.8.19' ],
+23 silly audit   '@types/crypto-js': [ '4.2.2' ],
+23 silly audit   '@types/dateformat': [ '5.0.3' ],
+23 silly audit   '@types/domhandler': [ '2.4.5' ],
+23 silly audit   '@types/domutils': [ '1.7.8' ],
+23 silly audit   '@types/eslint': [ '9.6.1' ],
+23 silly audit   '@types/eslint-scope': [ '3.7.7' ],
+23 silly audit   '@types/estree': [ '1.0.8' ],
+23 silly audit   '@types/express': [ '5.0.6' ],
+23 silly audit   '@types/express-serve-static-core': [ '5.1.0' ],
+23 silly audit   '@types/file-loader': [ '5.0.4' ],
+23 silly audit   '@types/file-saver': [ '2.0.7' ],
+23 silly audit   '@types/glob-parent': [ '5.1.3' ],
+23 silly audit   '@types/hoist-non-react-statics': [ '3.3.7' ],
+23 silly audit   '@types/html-minifier': [ '4.0.6' ],
+23 silly audit   '@types/htmlparser2': [ '3.10.7' ],
+23 silly audit   '@types/http-errors': [ '2.0.5' ],
+23 silly audit   '@types/http-proxy': [ '1.17.17' ],
+23 silly audit   '@types/jquery': [ '3.5.33' ],
+23 silly audit   '@types/json-schema': [ '7.0.15' ],
+23 silly audit   '@types/jsonwebtoken': [ '9.0.10' ],
+23 silly audit   '@types/less': [ '3.0.8' ],
+23 silly audit   '@types/loader-utils': [ '3.0.0' ],
+23 silly audit   '@types/mark.js': [ '8.11.12' ],
+23 silly audit   '@types/ms': [ '2.1.0' ],
+23 silly audit   '@types/multer': [ '2.0.0' ],
+23 silly audit   '@types/node': [ '24.10.1' ],
+23 silly audit   '@types/normalize-path': [ '3.0.2' ],
+23 silly audit   '@types/npm': [ '7.19.3' ],
+23 silly audit   '@types/qs': [ '6.14.0' ],
+23 silly audit   '@types/range-parser': [ '1.2.7' ],
+23 silly audit   '@types/react': [ '19.2.14' ],
+23 silly audit   '@types/react-bootstrap-table-next': [ '4.0.26' ],
+23 silly audit   '@types/react-bootstrap-table2-paginator': [ '2.1.6' ],
+23 silly audit   '@types/react-bootstrap-table2-toolkit': [ '2.1.14' ],
+23 silly audit   '@types/react-copy-to-clipboard': [ '5.0.7' ],
+23 silly audit   '@types/react-dev-utils': [ '9.0.15' ],
+23 silly audit   '@types/react-dom': [ '19.2.3' ],
+23 silly audit   '@types/react-highlight-words': [ '0.20.1' ],
+23 silly audit   '@types/react-html-parser': [ '2.0.7' ],
+23 silly audit   '@types/react-modal': [ '3.16.3' ],
+23 silly audit   '@types/react-outside-click-handler': [ '1.3.4' ],
+23 silly audit   '@types/react-paginate': [ '7.1.4' ],
+23 silly audit   '@types/react-redux': [ '7.1.34' ],
+23 silly audit   '@types/react-s-alert': [ '1.4.0' ],
+23 silly audit   '@types/react-slick': [ '0.23.13' ],
+23 silly audit   '@types/react-transition-group': [ '4.4.12' ],
+23 silly audit   '@types/relateurl': [ '0.2.33' ],
+23 silly audit   '@types/send': [ '1.2.1' ],
+23 silly audit   '@types/serialize-javascript': [ '5.0.4' ],
+23 silly audit   '@types/serve-static': [ '2.2.0' ],
+23 silly audit   '@types/sizzle': [ '2.3.10' ],
+23 silly audit   '@types/slick-carousel': [ '1.6.40' ],
+23 silly audit   '@types/source-list-map': [ '0.1.6' ],
+23 silly audit   '@types/styled-components': [ '5.1.36' ],
+23 silly audit   '@types/stylus': [ '0.48.43' ],
+23 silly audit   '@types/tapable': [ '1.0.12' ],
+23 silly audit   '@types/uglify-js': [ '3.17.5' ],
+23 silly audit   '@types/webpack': [ '4.41.40' ],
+23 silly audit   '@types/webpack-dev-server': [ '3.11.6' ],
+23 silly audit   '@types/webpack-sources': [ '3.2.3' ],
+23 silly audit   'source-map': [ '0.7.6', '0.6.1' ],
+23 silly audit   '@types/ws': [ '8.18.1' ],
+23 silly audit   '@webassemblyjs/ast': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/floating-point-hex-parser': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/helper-api-error': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/helper-buffer': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/helper-numbers': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/helper-wasm-bytecode': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/helper-wasm-section': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/ieee754': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/leb128': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/utf8': [ '1.13.2' ],
+23 silly audit   '@webassemblyjs/wasm-edit': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/wasm-gen': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/wasm-opt': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/wasm-parser': [ '1.14.1' ],
+23 silly audit   '@webassemblyjs/wast-printer': [ '1.14.1' ],
+23 silly audit   '@xtuc/ieee754': [ '1.2.0' ],
+23 silly audit   '@xtuc/long': [ '4.2.2' ],
+23 silly audit   acorn: [ '8.15.0' ],
+23 silly audit   'acorn-import-phases': [ '1.0.4' ],
+23 silly audit   ajv: [ '8.17.1' ],
+23 silly audit   'ajv-formats': [ '2.1.1' ],
+23 silly audit   'ajv-keywords': [ '5.1.0' ],
+23 silly audit   anymatch: [ '3.1.3' ],
+23 silly audit   'baseline-browser-mapping': [ '2.9.19' ],
+23 silly audit   braces: [ '3.0.3' ],
+23 silly audit   browserslist: [ '4.28.1' ],
+23 silly audit   'buffer-from': [ '1.1.2' ],
+23 silly audit   'caniuse-lite': [ '1.0.30001769' ],
+23 silly audit   'chrome-trace-event': [ '1.0.4' ],
+23 silly audit   commander: [ '2.20.3' ],
+23 silly audit   csstype: [ '3.2.3' ],
+23 silly audit   domelementtype: [ '1.3.1' ],
+23 silly audit   domhandler: [ '2.4.2' ],
+23 silly audit   'electron-to-chromium': [ '1.5.286' ],
+23 silly audit   'enhanced-resolve': [ '5.19.0' ],
+23 silly audit   'es-module-lexer': [ '2.0.0' ],
+23 silly audit   escalade: [ '3.2.0' ],
+23 silly audit   'eslint-scope': [ '5.1.1' ],
+23 silly audit   esrecurse: [ '4.3.0' ],
+23 silly audit   estraverse: [ '5.3.0', '4.3.0' ],
+23 silly audit   eventemitter3: [ '4.0.7' ],
+23 silly audit   events: [ '3.3.0' ],
+23 silly audit   'fast-deep-equal': [ '3.1.3' ],
+23 silly audit   'fast-uri': [ '3.1.0' ],
+23 silly audit   'fill-range': [ '7.1.1' ],
+23 silly audit   'follow-redirects': [ '1.15.11' ],
+23 silly audit   'glob-to-regexp': [ '0.4.1' ],
+23 silly audit   'graceful-fs': [ '4.2.11' ],
+23 silly audit   'has-flag': [ '4.0.0' ],
+23 silly audit   'hoist-non-react-statics': [ '3.3.2' ],
+23 silly audit   'http-proxy': [ '1.18.1' ],
+23 silly audit   'http-proxy-middleware': [ '1.3.1' ],
+23 silly audit   'is-extglob': [ '2.1.1' ],
+23 silly audit   'is-glob': [ '4.0.3' ],
+23 silly audit   'is-number': [ '7.0.0' ],
+23 silly audit   'is-plain-obj': [ '3.0.0' ],
+23 silly audit   'jest-worker': [ '27.5.1' ],
+23 silly audit   'json-parse-even-better-errors': [ '2.3.1' ],
+23 silly audit   'json-schema-traverse': [ '1.0.0' ],
+23 silly audit   'loader-runner': [ '4.3.1' ],
+23 silly audit   'merge-stream': [ '2.0.0' ],
+23 silly audit   micromatch: [ '4.0.8' ],
+23 silly audit   'mime-db': [ '1.52.0' ],
+23 silly audit   'mime-types': [ '2.1.35' ],
+23 silly audit   'neo-async': [ '2.6.2' ],
+23 silly audit   'node-releases': [ '2.0.27' ],
+23 silly audit   'normalize-path': [ '3.0.0' ],
+23 silly audit   picocolors: [ '1.1.1' ],
+23 silly audit   picomatch: [ '2.3.1' ],
+23 silly audit   randombytes: [ '2.1.0' ],
+23 silly audit   'react-is': [ '16.13.1' ],
+23 silly audit   redux: [ '4.2.1' ],
+23 silly audit   'require-from-string': [ '2.0.2' ],
+23 silly audit   'requires-port': [ '1.0.0' ],
+23 silly audit   'safe-buffer': [ '5.2.1' ],
+23 silly audit   'schema-utils': [ '4.3.3' ],
+23 silly audit   'serialize-javascript': [ '6.0.2' ],
+23 silly audit   'source-map-support': [ '0.5.21' ],
+23 silly audit   'supports-color': [ '8.1.1' ],
+23 silly audit   tapable: [ '2.3.0' ],
+23 silly audit   terser: [ '5.46.0' ],
+23 silly audit   'terser-webpack-plugin': [ '5.3.16' ],
+23 silly audit   'to-regex-range': [ '5.0.1' ],
+23 silly audit   'types-registry': [ '0.1.756' ],
+23 silly audit   'undici-types': [ '7.16.0' ],
+23 silly audit   'update-browserslist-db': [ '1.2.3' ],
+23 silly audit   watchpack: [ '2.5.1' ],
+23 silly audit   webpack: [ '5.105.2' ],
+23 silly audit   'webpack-sources': [ '3.3.3' ],
+23 silly audit   '@types/html-webpack-plugin': [ '3.2.9' ]
+23 silly audit }
+24 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 240ms
+25 silly audit report {
+25 silly audit report   'http-proxy-middleware': [
+25 silly audit report     {
+25 silly audit report       id: 1100223,
+25 silly audit report       url: 'https://github.com/advisories/GHSA-c7qv-q95q-8v27',
+25 silly audit report       title: 'Denial of service in http-proxy-middleware',
+25 silly audit report       severity: 'high',
+25 silly audit report       vulnerable_versions: '<2.0.7',
+25 silly audit report       cwe: [Array],
+25 silly audit report       cvss: [Object]
+25 silly audit report     },
+25 silly audit report     {
+25 silly audit report       id: 1104105,
+25 silly audit report       url: 'https://github.com/advisories/GHSA-9gqv-wp59-fq42',
+25 silly audit report       title: 'http-proxy-middleware allows fixRequestBody to proceed even if bodyParser has failed',
+25 silly audit report       severity: 'moderate',
+25 silly audit report       vulnerable_versions: '>=1.3.0 <2.0.9',
+25 silly audit report       cwe: [Array],
+25 silly audit report       cvss: [Object]
+25 silly audit report     },
+25 silly audit report     {
+25 silly audit report       id: 1104106,
+25 silly audit report       url: 'https://github.com/advisories/GHSA-4www-5p9h-95mh',
+25 silly audit report       title: 'http-proxy-middleware can call writeBody twice because "else if" is not used',
+25 silly audit report       severity: 'moderate',
+25 silly audit report       vulnerable_versions: '>=1.3.0 <2.0.8',
+25 silly audit report       cwe: [Array],
+25 silly audit report       cvss: [Object]
+25 silly audit report     }
+25 silly audit report   ]
+25 silly audit report }
+26 silly packumentCache corgi:https://registry.npmjs.org/http-proxy-middleware cache-miss
+27 http fetch GET 200 https://registry.npmjs.org/http-proxy-middleware 34ms (cache revalidated)
+28 silly packumentCache corgi:https://registry.npmjs.org/http-proxy-middleware set size:146277 disposed:false
+29 silly packumentCache corgi:https://registry.npmjs.org/@types%2fwebpack-dev-server cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/@types%2fwebpack-dev-server 39ms (cache revalidated)
+31 silly packumentCache corgi:https://registry.npmjs.org/@types%2fwebpack-dev-server set size:61517 disposed:false
+32 silly packumentCache corgi:https://registry.npmjs.org/@types%2freact-dev-utils cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/@types%2freact-dev-utils 37ms (cache revalidated)
+34 silly packumentCache corgi:https://registry.npmjs.org/@types%2freact-dev-utils set size:25976 disposed:false
+35 verbose cwd /Users/vijayramireddy/Library/Caches/typescript/5.9
+36 verbose os Darwin 24.3.0
+37 verbose node v22.17.1
+38 verbose npm  v10.9.2
+39 verbose exit 0
+40 info ok
