@@ -54,7 +54,8 @@ jobs:
           host: 65.108.76.42
           username: mcaandas
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT || 21098 }}
           script: |
             cd /home/mcaandas/mcaandassoc.com/mca
             echo "📦 Installing dependencies..."
