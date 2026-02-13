@@ -42,8 +42,6 @@ jobs:
             **/node_modules/**
             **/.env*
             **/*.md
-            **/dist/**
-            **/build/**
             **/.next/**
             **/logs/**
             **/.cache/**
@@ -57,23 +55,15 @@ jobs:
           username: mcaandas
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 22 }}
+          port: ${{ secrets.SSH_PORT || 21098 }}
           script: |
             cd /home/mcaandas/mcaandassoc.com/mca
             echo "📦 Installing dependencies..."
             rm -rf node_modules
             npm ci --production --legacy-peer-deps
             
-            echo "🔨 Building frontend..."
-            npm run build:qa
-            
             echo "🔄 Restarting Node.js application..."
-            # If using cPanel's Node.js Manager
             /opt/cpanel/ea-nodejs20/bin/npm restart
-            
-            # Or if using PM2 (if installed on your cPanel)
-            # pm2 restart ecosystem.config.js --env production
-            # pm2 save
             
             echo "✅ Deployment completed successfully!"
             echo "🌐 Your app should be available at your domain"
