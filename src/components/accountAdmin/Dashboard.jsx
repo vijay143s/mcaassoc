@@ -136,7 +136,7 @@ const Dashboard = () => {
               src={MOHAN}
               className="img-fluid logo"
               style={{ height: "60px" }}
-              alt="Logo"
+              alt="MCA & Associates Logo"
             />
           </div>
           <nav>
@@ -281,19 +281,19 @@ const Dashboard = () => {
           <div>
             <img
               src={DAP}
-              alt="CA Services"
+              alt="Professional Chartered Accountant Services - MCA & Associates"
             />
           </div>
           <div>
             <img
               src={PWF}
-              alt="Tax Consulting"
+              alt="Tax Consulting and Financial Advisory Services"
             />
           </div>
           <div>
             <img
               src={FDP}
-              alt="GST and Compliance"
+              alt="GST Compliance and Audit Services in Hyderabad"
             />
           </div>
         </Carousel>
@@ -476,84 +476,85 @@ const Dashboard = () => {
       <section ref={ourTeamRef} className="our-team">
         <div className="container">
           <h2>Our Team</h2>
+          <div className="team-grid">
+            {/* Member 1: CA CHANDRAMOHAN */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-avatar">CM</div>
+                <div className="team-info">
+                  <h3>CA CHANDRAMOHAN</h3>
+                  <span className="designation">B.Com, CA</span>
+                </div>
+              </div>
+              <div className="team-body">
+                <p>
+                  With over <strong>7 years of professional experience</strong>, he is a
+                  seasoned expert in <strong>taxation, audit and assurance</strong>, and
+                  <strong> corporate management consulting</strong>.
+                </p>
+                <p>
+                  He has extensive experience in handling <strong>statutory audits, tax audits, and system audits</strong> and
+                  specializes in <strong>advisory services, Virtual CFO services</strong>,
+                  and <strong>consultation on direct tax matters</strong>.
+                </p>
+                <p>
+                  He has also extensively handled <strong>registrations and regular compliances under Direct Taxes, Indirect
+                    Taxes, and Company Law</strong>. His in-depth knowledge and strategic insights have enabled numerous
+                  clients to achieve their financial goals efficiently.
+                </p>
+              </div>
+            </div>
 
-          <div className="body2 text-secondary text-justify mt-16 px-5">
+            {/* Member 2: CA GOPICHAND */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-avatar">GC</div>
+                <div className="team-info">
+                  <h3>CA GOPICHAND</h3>
+                  <span className="designation">LLB, CA</span>
+                </div>
+              </div>
+              <div className="team-body">
+                <p>
+                  With over <strong>7 years of professional experience</strong>, he has
+                  vast exposure in handling matters related to <strong>labour consulting, legal proceedings, corporate management, and
+                    indirect taxation</strong> across various industrial and service sectors.
+                </p>
+                <p>
+                  He specializes in <strong>GST and former indirect tax laws</strong> and
+                  has provided <strong>representation services before various statutory authorities</strong>.
+                </p>
+                <p>
+                  He has significant experience in <strong>structuring and formation of companies</strong> and also brings
+                  valuable exposure from working with a <strong>Big 4 firm post qualification</strong>.
+                </p>
+              </div>
+            </div>
 
-            {/* Member 1 */}
-            <p><strong>CA CHANDRAMOHAN, B.Com, CA</strong></p>
-            <p>
-              With over <strong>7 years of professional experience</strong>, he is a
-              seasoned expert in <strong>taxation, audit and assurance</strong>, and
-              <strong> corporate management consulting</strong>.
-            </p>
-            <p>
-              He has extensive experience in handling{" "}
-              <strong>statutory audits, tax audits, and system audits</strong> and
-              specializes in <strong>advisory services, Virtual CFO services</strong>,
-              and <strong>consultation on direct tax matters</strong>.
-            </p>
-            <p>
-              He has also extensively handled{" "}
-              <strong>
-                registrations and regular compliances under Direct Taxes, Indirect
-                Taxes, and Company Law
-              </strong>
-              . His in-depth knowledge and strategic insights have enabled numerous
-              clients to achieve their financial goals efficiently.
-            </p>
-
-            <hr />
-
-            {/* Member 2 */}
-            <p><strong>CA GOPICHAND, LLB, CA</strong></p>
-            <p>
-              With over <strong>7 years of professional experience</strong>, he has
-              vast exposure in handling matters related to{" "}
-              <strong>
-                labour consulting, legal proceedings, corporate management, and
-                indirect taxation
-              </strong>{" "}
-              across various industrial and service sectors.
-            </p>
-            <p>
-              He specializes in <strong>GST and former indirect tax laws</strong> and
-              has provided <strong>representation services before various statutory authorities</strong>.
-            </p>
-            <p>
-              He has significant experience in{" "}
-              <strong>structuring and formation of companies</strong> and also brings
-              valuable exposure from working with a{" "}
-              <strong>Big 4 firm post qualification</strong>.
-            </p>
-
-            <hr />
-
-
-
-            {/* Member 4 */}
-            <p><strong>PRIYACHARAN S R, CS</strong></p>
-
-            <p>
-              He is a <strong>Company Secretary (CS)</strong>, qualified in 2015 and a member of the{" "}
-              <strong>Institute of Company Secretaries of India (ICSI)</strong>, with strong expertise in{" "}
-              <strong>taxation, corporate compliances, and allied regulatory domains</strong>. His professional
-              journey spans across <strong>Income Tax compliances (including NRI taxation), Corporate Tax, GST,
-                Companies Act compliances, FEMA advisory, Financial Planning & Analysis (FP&A), and litigation
-                management</strong>, enabling him to deliver audit-ready and compliance-focused advisory solutions.
-            </p>
-
-            <p>
-              He has extensive experience in advising clients on{" "}
-              <strong>corporate governance, regulatory frameworks, tax structuring, and statutory litigations</strong>.
-              He has assisted organizations across <strong>technology, venture capital, and pharmaceutical sectors</strong>{" "}
-              in matters including <strong>transfer pricing audits, benchmarking studies, foreign investment entry
-                strategies, amalgamations, demergers, slump sale transactions, AAR applications, compensation
-                structuring, DSIR registrations, and ongoing compliance under Direct Tax, Indirect Tax, FEMA, and
-                Labour Laws</strong>.
-            </p>
-
-
-
+            {/* Member 3: PRIYACHARAN S R */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-avatar">PS</div>
+                <div className="team-info">
+                  <h3>PRIYACHARAN S R</h3>
+                  <span className="designation">Company Secretary (CS)</span>
+                </div>
+              </div>
+              <div className="team-body">
+                <p>
+                  Qualified in 2015 and a member of the <strong>Institute of Company Secretaries of India (ICSI)</strong>,
+                  he brings strong expertise in <strong>taxation, corporate compliances, and allied regulatory domains</strong>.
+                  His professional journey spans across <strong>Income Tax compliances (including NRI taxation), Corporate Tax, GST,
+                    Companies Act compliances, FEMA advisory, FP&A, and litigation management</strong>.
+                </p>
+                <p>
+                  He has extensive experience in advising clients on <strong>corporate governance, regulatory frameworks, tax structuring, and statutory litigations</strong>.
+                  He has assisted organizations across <strong>technology, venture capital, and pharmaceutical sectors</strong> in matters including
+                  <strong>transfer pricing audits, benchmarking studies, foreign investment entry strategies, amalgamations, demergers, slump sale transactions, AAR applications, compensation
+                    structuring, DSIR registrations, and ongoing compliance under Direct Tax, Indirect Tax, FEMA, and Labour Laws</strong>.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
