@@ -17,27 +17,27 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './public/index.html',
   filename: 'index.html',
   inject: 'body'
-}) 
+})
 
 
-module.exports= env => {
+module.exports = env => {
   console.log('started building in webpack development');
   console.log(env);
-    return {
-    entry: ['babel-polyfill','./src/index.js'],
-    
+  return {
+    mode: 'production',
+    entry: ['babel-polyfill', './src/index.js'],
+
     output: {
-      path: path.resolve('dist'),
-      filename: 'index_bundle.js',
-      libraryTarget: 'umd' 
+      path: path.resolve('dist/qa'),
+      filename: 'index_bundle.js'
     },
     module: {
       rules: [
-        { test: /\.css$/,
+        {
+          test: /\.css$/,
           use: [
-            // The `injectType`  option can be avoided because it is default behaviour
             { loader: 'style-loader' },
-            { loader: 'css-loader', options: {  esModule: false, } },
+            { loader: 'css-loader', options: { esModule: false, } },
           ],
         },
         {
@@ -49,25 +49,22 @@ module.exports= env => {
           exclude: /node_modules/,
           use: "babel-loader"
         }, {
-          test: /\.(ttf|eot|woff|woff2|map)$/,          
-          use: "url-loader"
+          test: /\.(ttf|eot|woff|woff2|map)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name][ext]'
+          }
         },
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                esModule: false,
-              },
-            },
-          ]
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/[name][ext]'
+          }
         },
         {
-          test:/\.html$/,
-          use: [
-            'html-loader'
-          ]
+          test: /\.html$/,
+          use: ['html-loader']
         },
       ]
     },
@@ -81,14 +78,14 @@ module.exports= env => {
       HtmlWebpackPluginConfig,
       new CopyWebpackPlugin({
         patterns: [
-            { from: 'src/assets'},
-            { from: 'public'}
+          { from: 'src/assets' },
+          { from: 'public' }
         ]
-    }),
-    new webpack.DefinePlugin({
-      'process.env': JSON.stringify(dotenv.config().parsed) // it will automatically pick up key values from .env file
-    }),
-    new CleanWebpackPlugin()
+      }),
+      new webpack.DefinePlugin({
+        'process.env': JSON.stringify(dotenv.config().parsed) // it will automatically pick up key values from .env file
+      }),
+      new CleanWebpackPlugin()
     ]
   }
 }

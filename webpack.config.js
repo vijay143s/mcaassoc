@@ -80,24 +80,21 @@ module.exports = env => {
           use: "babel-loader"
         }, {
           test: /\.(ttf|eot|woff|woff2|map)$/,
-          use: "url-loader"
+          type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name][ext]'
+          }
         },
         {
           test: /\.(gif|png|jpe?g|svg|csv|xls|xlsx|xlsm|xlsb|xltx|xltm|xlt|xml|xlam|xla|xlw|xlr)$/i,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                esModule: false,
-              },
-            },
-          ]
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/[name][ext]'
+          }
         },
         {
           test: /\.html$/,
-          use: [
-            'html-loader'
-          ]
+          use: ['html-loader']
         },
       ]
     },
