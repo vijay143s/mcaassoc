@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.18.3'
+          node-version: '20.19.4'
 
       - name: Install dependencies
         run: npm ci --force
@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
           local-dir: ./
-          server-dir: /home/mcaandas/mcaandassoc.com/mca/
+          server-dir: /
           exclude: |
             **/.git*
             **/.git*/**
@@ -58,7 +58,7 @@ jobs:
           script: |
             cd /home/mcaandas/mcaandassoc.com/mca
             echo "📦 Installing dependencies..."
-            npm install --production
+            npm install --production --legacy-peer-deps
             
             echo "🔨 Building frontend..."
             npm run build:qa
