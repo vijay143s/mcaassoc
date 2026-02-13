@@ -27,7 +27,17 @@ jobs:
       - name: Build frontend
         run: npm run build:qa
 
-      - name: Deploy to cPanel via FTP
+      - name: Deploy Frontend to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 65.108.76.42
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./dist/qa/
+          server-dir: /public_html/
+      
+      - name: Deploy Server Files to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: 65.108.76.42
@@ -35,11 +45,14 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
           local-dir: ./
-          server-dir: /
+          server-dir: /mca/
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
+            **/src/**
+            **/public/**
+            **/dist/**
             **/.env*
             **/*.md
             **/.next/**
