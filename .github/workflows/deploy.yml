@@ -58,7 +58,8 @@ jobs:
           script: |
             cd /home/mcaandas/mcaandassoc.com/mca
             echo "📦 Installing dependencies..."
-            npm install --production --legacy-peer-deps
+            rm -rf node_modules
+            npm ci --production --legacy-peer-deps
             
             echo "🔨 Building frontend..."
             npm run build:qa
