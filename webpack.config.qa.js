@@ -56,7 +56,7 @@ module.exports = env => {
           }
         },
         {
-          test: /\.(gif|png|jpe?g|svg)$/i,
+          test: /\.(gif|png|jpe?g|svg|ico|webmanifest)$/i,
           type: 'asset/resource',
           generator: {
             filename: 'images/[name][ext]'
@@ -64,7 +64,14 @@ module.exports = env => {
         },
         {
           test: /\.html$/,
-          use: ['html-loader']
+          use: [
+            {
+              loader: 'html-loader',
+              options: {
+                sources: false
+              }
+            }
+          ]
         },
       ]
     },
@@ -72,14 +79,16 @@ module.exports = env => {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: path.resolve('./public/index.html'),
-      }),
       HtmlWebpackPluginConfig,
       new CopyWebpackPlugin({
         patterns: [
           { from: 'src/assets' },
-          { from: 'public' }
+          {
+            from: 'public',
+            globOptions: {
+              ignore: ['**/index.html'],
+            },
+          }
         ]
       }),
       new webpack.DefinePlugin({

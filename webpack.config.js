@@ -86,7 +86,7 @@ module.exports = env => {
           }
         },
         {
-          test: /\.(gif|png|jpe?g|svg|csv|xls|xlsx|xlsm|xlsb|xltx|xltm|xlt|xml|xlam|xla|xlw|xlr)$/i,
+          test: /\.(gif|png|jpe?g|svg|ico|webmanifest|csv|xls|xlsx|xlsm|xlsb|xltx|xltm|xlt|xml|xlam|xla|xlw|xlr)$/i,
           type: 'asset/resource',
           generator: {
             filename: 'images/[name][ext]'
@@ -94,7 +94,14 @@ module.exports = env => {
         },
         {
           test: /\.html$/,
-          use: ['html-loader']
+          use: [
+            {
+              loader: 'html-loader',
+              options: {
+                sources: false
+              }
+            }
+          ]
         },
       ]
     },
