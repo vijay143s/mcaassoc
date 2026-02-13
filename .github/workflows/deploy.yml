@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.mcaandassoc.com
+          server: 65.108.76.42
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
@@ -51,9 +51,9 @@ jobs:
       - name: SSH - Install Node Modules & Restart App
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          host: 65.108.76.42
+          username: mcaandas
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             cd /home/mcaandas/mcaandassoc.com/mca
