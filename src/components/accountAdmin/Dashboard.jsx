@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "../../assets/css/style4.css"; // Make sure this path is correct
 import MOHAN from "../../assets/images/mohan.png";
-import CA from "../../assets/images/CA-image.png"; 
+import CA from "../../assets/images/CA-image.png";
 import UST from "../../assets/images/UST.png";// Adjust path as needed
 import CFO from "../../assets/images/CFO.png";
 import APM from "../../assets/images/APM.png";
@@ -45,11 +45,6 @@ const servicesData = [
     link: "International-Taxation-Services-in-Hyderabad",
   },
   {
-    title: "RERA CONSULTANTS",
-    img: RERA,
-    link: "RERA-Consultants-Hyderabad",
-  },
-  {
     title: "FINANCIAL ADVISORS",
     img: FD,
     link: "Home-Loan-Advisors-in-Hyderabad",
@@ -77,7 +72,7 @@ const servicesData = [
 ];
 
 const servicesData1 = [
- 
+
   {
     title: "STARTUP",
     img: "https://www.kkreddyassociates.com/adminassets/Client//1762236216.jpg",
@@ -174,7 +169,7 @@ const Dashboard = () => {
             <div className="dropdown services-dropdown">
               <span>Services</span>
               <div className="dropdown-content mega-menu">
-                 <div className="menu-column">
+                <div className="menu-column">
                   <h4>Virtual CFO Services</h4>
                   <a href="#">MIS and FP&A Structures design and implementation Budgeting and MIS Support</a>
                   <a href="#">Competition benchmarking</a>
@@ -280,7 +275,7 @@ const Dashboard = () => {
           showStatus={false}
           infiniteLoop
           autoPlay
-           interval={2000}
+          interval={2000}
           transitionTime={700}
         >
           <div>
@@ -425,17 +420,17 @@ const Dashboard = () => {
           <Slider {...settings} className="services-slider">
             {servicesData.map((service, index) => (
               <div key={index} className="service-slide">
-               
-                  <div className="service-card">
-                    <div className="service-img-wrapper">
-                      <img
-                        src={service.img}
-                        alt={service.title}
-                        className="service-img"
-                      />
-                    </div>
+
+                <div className="service-card">
+                  <div className="service-img-wrapper">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="service-img"
+                    />
                   </div>
-               
+                </div>
+
               </div>
             ))}
           </Slider>
@@ -445,33 +440,33 @@ const Dashboard = () => {
       <section className="clients" ref={clientsRef}>
         <div className="container">
           <h2>Clients</h2>
-         <Slider {...settings} className="services-slider">
-  {servicesData1.map((service, index) => (
-    <div key={index} className="service-slide">
-      <a
-        href={service.link}
-        className="service-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="service-card">
-          <div className="service-img-wrapper">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="service-img"
-            />
-          </div>
+          <Slider {...settings} className="services-slider">
+            {servicesData1.map((service, index) => (
+              <div key={index} className="service-slide">
+                <a
+                  href={service.link}
+                  className="service-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="service-card">
+                    <div className="service-img-wrapper">
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        className="service-img"
+                      />
+                    </div>
 
-          {/* Service name below the image */}
-          <div className="service-title">
-            {service.title}
-          </div>
-        </div>
-      </a>
-    </div>
-  ))}
-</Slider>
+                    {/* Service name below the image */}
+                    <div className="service-title">
+                      {service.title}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </Slider>
 
         </div>
       </section>
@@ -479,89 +474,89 @@ const Dashboard = () => {
 
 
       <section ref={ourTeamRef} className="our-team">
-  <div className="container">
-    <h2>Our Team</h2>
+        <div className="container">
+          <h2>Our Team</h2>
 
-    <div className="body2 text-secondary text-justify mt-16 px-5">
+          <div className="body2 text-secondary text-justify mt-16 px-5">
 
-      {/* Member 1 */}
-      <p><strong>CA CHANDRAMOHAN, B.Com, CA</strong></p>
-      <p>
-        With over <strong>7 years of professional experience</strong>, he is a
-        seasoned expert in <strong>taxation, audit and assurance</strong>, and
-        <strong> corporate management consulting</strong>.
-      </p>
-      <p>
-        He has extensive experience in handling{" "}
-        <strong>statutory audits, tax audits, and system audits</strong> and
-        specializes in <strong>advisory services, Virtual CFO services</strong>,
-        and <strong>consultation on direct tax matters</strong>.
-      </p>
-      <p>
-        He has also extensively handled{" "}
-        <strong>
-          registrations and regular compliances under Direct Taxes, Indirect
-          Taxes, and Company Law
-        </strong>
-        . His in-depth knowledge and strategic insights have enabled numerous
-        clients to achieve their financial goals efficiently.
-      </p>
+            {/* Member 1 */}
+            <p><strong>CA CHANDRAMOHAN, B.Com, CA</strong></p>
+            <p>
+              With over <strong>7 years of professional experience</strong>, he is a
+              seasoned expert in <strong>taxation, audit and assurance</strong>, and
+              <strong> corporate management consulting</strong>.
+            </p>
+            <p>
+              He has extensive experience in handling{" "}
+              <strong>statutory audits, tax audits, and system audits</strong> and
+              specializes in <strong>advisory services, Virtual CFO services</strong>,
+              and <strong>consultation on direct tax matters</strong>.
+            </p>
+            <p>
+              He has also extensively handled{" "}
+              <strong>
+                registrations and regular compliances under Direct Taxes, Indirect
+                Taxes, and Company Law
+              </strong>
+              . His in-depth knowledge and strategic insights have enabled numerous
+              clients to achieve their financial goals efficiently.
+            </p>
 
-      <hr />
+            <hr />
 
-      {/* Member 2 */}
-      <p><strong>CA GOPICHAND, LLB, CA</strong></p>
-      <p>
-        With over <strong>7 years of professional experience</strong>, he has
-        vast exposure in handling matters related to{" "}
-        <strong>
-          labour consulting, legal proceedings, corporate management, and
-          indirect taxation
-        </strong>{" "}
-        across various industrial and service sectors.
-      </p>
-      <p>
-        He specializes in <strong>GST and former indirect tax laws</strong> and
-        has provided <strong>representation services before various statutory authorities</strong>.
-      </p>
-      <p>
-        He has significant experience in{" "}
-        <strong>structuring and formation of companies</strong> and also brings
-        valuable exposure from working with a{" "}
-        <strong>Big 4 firm post qualification</strong>.
-      </p>
+            {/* Member 2 */}
+            <p><strong>CA GOPICHAND, LLB, CA</strong></p>
+            <p>
+              With over <strong>7 years of professional experience</strong>, he has
+              vast exposure in handling matters related to{" "}
+              <strong>
+                labour consulting, legal proceedings, corporate management, and
+                indirect taxation
+              </strong>{" "}
+              across various industrial and service sectors.
+            </p>
+            <p>
+              He specializes in <strong>GST and former indirect tax laws</strong> and
+              has provided <strong>representation services before various statutory authorities</strong>.
+            </p>
+            <p>
+              He has significant experience in{" "}
+              <strong>structuring and formation of companies</strong> and also brings
+              valuable exposure from working with a{" "}
+              <strong>Big 4 firm post qualification</strong>.
+            </p>
 
-      <hr />
-
-     
-
-     {/* Member 4 */}
-<p><strong>PRIYACHARAN S R, CS</strong></p>
-
-<p>
-  He is a <strong>Company Secretary (CS)</strong>, qualified in 2015 and a member of the{" "}
-  <strong>Institute of Company Secretaries of India (ICSI)</strong>, with strong expertise in{" "}
-  <strong>taxation, corporate compliances, and allied regulatory domains</strong>. His professional
-  journey spans across <strong>Income Tax compliances (including NRI taxation), Corporate Tax, GST,
-  Companies Act compliances, FEMA advisory, Financial Planning & Analysis (FP&A), and litigation
-  management</strong>, enabling him to deliver audit-ready and compliance-focused advisory solutions.
-</p>
-
-<p>
-  He has extensive experience in advising clients on{" "}
-  <strong>corporate governance, regulatory frameworks, tax structuring, and statutory litigations</strong>.
-  He has assisted organizations across <strong>technology, venture capital, and pharmaceutical sectors</strong>{" "}
-  in matters including <strong>transfer pricing audits, benchmarking studies, foreign investment entry
-  strategies, amalgamations, demergers, slump sale transactions, AAR applications, compensation
-  structuring, DSIR registrations, and ongoing compliance under Direct Tax, Indirect Tax, FEMA, and
-  Labour Laws</strong>.
-</p>
+            <hr />
 
 
 
-    </div>
-  </div>
-</section>
+            {/* Member 4 */}
+            <p><strong>PRIYACHARAN S R, CS</strong></p>
+
+            <p>
+              He is a <strong>Company Secretary (CS)</strong>, qualified in 2015 and a member of the{" "}
+              <strong>Institute of Company Secretaries of India (ICSI)</strong>, with strong expertise in{" "}
+              <strong>taxation, corporate compliances, and allied regulatory domains</strong>. His professional
+              journey spans across <strong>Income Tax compliances (including NRI taxation), Corporate Tax, GST,
+                Companies Act compliances, FEMA advisory, Financial Planning & Analysis (FP&A), and litigation
+                management</strong>, enabling him to deliver audit-ready and compliance-focused advisory solutions.
+            </p>
+
+            <p>
+              He has extensive experience in advising clients on{" "}
+              <strong>corporate governance, regulatory frameworks, tax structuring, and statutory litigations</strong>.
+              He has assisted organizations across <strong>technology, venture capital, and pharmaceutical sectors</strong>{" "}
+              in matters including <strong>transfer pricing audits, benchmarking studies, foreign investment entry
+                strategies, amalgamations, demergers, slump sale transactions, AAR applications, compensation
+                structuring, DSIR registrations, and ongoing compliance under Direct Tax, Indirect Tax, FEMA, and
+                Labour Laws</strong>.
+            </p>
+
+
+
+          </div>
+        </div>
+      </section>
 
 
       <section className="contact" ref={contactRef}>
@@ -578,7 +573,7 @@ const Dashboard = () => {
                 <h4 className="mb-3 mt-4">Branch Office</h4>
                 <p>
                   <i className="ph-light ph-map-pin text-line"></i>
-                No.18, 2nd Floor, Ranganathapura Main Road, Malleshwaram 18th Cross, Bengaluru KA-560003.
+                  No.18, 2nd Floor, Ranganathapura Main Road, Malleshwaram 18th Cross, Bengaluru KA-560003.
 
                 </p>
                 <h4 className="mb-3 mt-4">Phone</h4>
@@ -600,7 +595,7 @@ const Dashboard = () => {
                 </p>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>

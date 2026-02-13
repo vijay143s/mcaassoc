@@ -51,6 +51,8 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/src/**
+            **/public/**
+            **/dist/**
             **/.env*
             **/*.md
             **/.next/**
@@ -59,25 +61,25 @@ jobs:
             **/.npm-cache/**
             **/.npm-cache
 
-      - name: SSH - Install Node Modules & Restart App
-        uses: appleboy/ssh-action@master
-        with:
-          host: 65.108.76.42
-          username: mcaandas
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 21098 }}
-          script: |
-            cd /home/mcaandas/mcaandassoc.com/mca
-            echo "📦 Installing dependencies..."
-            rm -rf node_modules
-            npm ci --production --legacy-peer-deps
+      # - name: SSH - Install Node Modules & Restart App
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: 65.108.76.42
+      #     username: mcaandas
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     passphrase: ${{ secrets.SSH_PASSPHRASE }}
+      #     port: ${{ secrets.SSH_PORT || 21098 }}
+      #     script: |
+      #       cd /home/mcaandas/mcaandassoc.com/mca
+      #       echo "📦 Installing dependencies..."
+      #       rm -rf node_modules
+      #       npm ci --production --legacy-peer-deps
             
-            echo "🔄 Restarting Node.js application..."
-            /opt/cpanel/ea-nodejs20/bin/npm restart
+      #       echo "🔄 Restarting Node.js application..."
+      #       /opt/cpanel/ea-nodejs20/bin/npm restart
             
-            echo "✅ Deployment completed successfully!"
-            echo "🌐 Your app should be available at your domain"
+      #       echo "✅ Deployment completed successfully!"
+      #       echo "🌐 Your app should be available at your domain"
 
       - name: Deployment Summary
         run: |
