@@ -51,8 +51,6 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/src/**
-            **/public/**
-            **/dist/**
             **/.env*
             **/*.md
             **/.next/**
