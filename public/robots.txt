@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.kkreddyassociates.com/sitemap.xml
+Sitemap: https://www.mcaandassoc.com/sitemap.xml

@@ -75,17 +75,17 @@ const servicesData1 = [
 
   {
     title: "STARTUP",
-    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236216.jpg",
+    img: "https://www.mcaandassoc.com/adminassets/Client//1762236216.jpg",
     link: "RERA-Consultants-Hyderabad",
   },
   {
     title: "Non Resident Indian",
-    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236117.jpg",
+    img: "https://www.mcaandassoc.com/adminassets/Client//1762236117.jpg",
     link: "Home-Loan-Advisors-in-Hyderabad",
   },
   {
     title: "Foreign Business Setups In India",
-    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236117.jpg",
+    img: "https://www.mcaandassoc.com/adminassets/Client//1762236117.jpg",
     link: "Corporate-Tax-Services",
   },
 ];
@@ -342,10 +342,10 @@ const Dashboard = () => {
                     Get Started
                   </a>
                   <a
-                    href="tel:+91-63024341898"
+                    href="tel:+91-6302431898"
                     className="btn btn-outline-info rounded-pill d-flex align-items-center gap-2 px-4 py-2"
                   >
-                    <i className="ph ph-phone fs-20"></i> +91-63024341898
+                    <i className="ph ph-phone fs-20"></i> +91-6302431898
                   </a>
                 </div>
               </div>
@@ -569,7 +569,7 @@ const Dashboard = () => {
                 <h4 className="mb-3">Head Office</h4>
                 <p>
                   <i className="ph-light ph-map-pin text-line"></i>
-                  Flat No. 1072 10th floor, Manjeera Trinity Corporate, KPHB JNTUH - Hitech Road, Hyderabad, TS - 500085
+                  Unit 1012, 10th floor, Manjeera Trinity Corporate, KPHB, Beside Lulu Mall, JNTUH - Hitech Road, Hyderabad, TS - 500085
                 </p>
                 <h4 className="mb-3 mt-4">Branch Office</h4>
                 <p>
@@ -580,18 +580,18 @@ const Dashboard = () => {
                 <h4 className="mb-3 mt-4">Phone</h4>
                 <p>
                   <i className="ph ph-phone text-line"></i>
-                  <a href="tel:+91-63024341898" className="text-dark ms-2">
-                    +91-63024341898
+                  <a href="tel:+91-6302431898" className="text-dark ms-2">
+                    +91-6302431898
                   </a>
                 </p>
                 <h4 className="mb-3 mt-4">Email</h4>
                 <p>
                   <i className="ph ph-envelope text-line"></i>
                   <a
-                    href="mailto:info@kkreddyassociates.com"
+                    href="mailto:consult@mcaandassoc.com"
                     className="text-dark ms-2"
                   >
-                    reachca.mca@outlook.com
+                    consult@mcaandassoc.com
                   </a>
                 </p>
               </div>
