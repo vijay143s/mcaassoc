@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
+import { useHistory } from "react-router-dom";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -75,22 +76,23 @@ const servicesData1 = [
 
   {
     title: "STARTUP",
-    img: "https://www.mcaandassoc.com/adminassets/Client//1762236216.jpg",
+    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236216.jpg",
     link: "RERA-Consultants-Hyderabad",
   },
   {
     title: "Non Resident Indian",
-    img: "https://www.mcaandassoc.com/adminassets/Client//1762236117.jpg",
+    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236117.jpg",
     link: "Home-Loan-Advisors-in-Hyderabad",
   },
   {
     title: "Foreign Business Setups In India",
-    img: "https://www.mcaandassoc.com/adminassets/Client//1762236117.jpg",
+    img: "https://www.kkreddyassociates.com/adminassets/Client//1762236117.jpg",
     link: "Corporate-Tax-Services",
   },
 ];
 
 const Dashboard = () => {
+  const history = useHistory();
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
   const clientsRef = useRef(null);
@@ -104,6 +106,10 @@ const Dashboard = () => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const navigateHome = () => {
+    history.push("/");
   };
 
   const settings = {
@@ -137,12 +143,12 @@ const Dashboard = () => {
               className="img-fluid logo"
               style={{ height: "90px", cursor: "pointer" }}
               alt="MCA & Associates Logo"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={navigateHome}
             />
           </div>
           <nav>
             <div className="dropdown">
-              <span onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</span>
+              <span onClick={navigateHome} style={{ cursor: "pointer" }}>Home</span>
             </div>
             <div className="dropdown about-dropdown">
               <span>About</span>
