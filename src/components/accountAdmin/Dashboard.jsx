@@ -135,13 +135,14 @@ const Dashboard = () => {
             <img
               src={MOHAN}
               className="img-fluid logo"
-              style={{ height: "60px" }}
+              style={{ height: "90px", cursor: "pointer" }}
               alt="MCA & Associates Logo"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
           <nav>
             <div className="dropdown">
-              <span>Home</span>
+              <span onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</span>
             </div>
             <div className="dropdown about-dropdown">
               <span>About</span>
@@ -569,7 +570,7 @@ const Dashboard = () => {
                 <h4 className="mb-3">Head Office</h4>
                 <p>
                   <i className="ph-light ph-map-pin text-line"></i>
-                  Unit 1012, 10th floor, Manjeera Trinity Corporate, KPHB, Beside Lulu Mall, JNTUH - Hitech Road, Hyderabad, TS - 500085
+                  Unit 1012, 10th floor, Manjeera Trinity Corporate, KPHB, Beside Lulu Mall, JNTUH - Hitech Road, Hyderabad, TS - 500072
                 </p>
                 <h4 className="mb-3 mt-4">Branch Office</h4>
                 <p>
